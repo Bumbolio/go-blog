@@ -11,8 +11,9 @@
   {{ $tailcss := resources.Get "css/tail-out.css" }}
   <link href="{{ $tailcss.RelPermalink }}" rel="stylesheet">
 
-  {{ $stylescss := resources.Get "css/styles.css" }}
-  <link href="{{ $stylescss.RelPermalink }}" rel="stylesheet">
+  {{ $stylesscss := resources.Get "css/styles.scss" }}
+  {{ $style := $stylesscss | resources.ToCSS | resources.Fingerprint }}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
   {{ partial "favicons.html" . }}
 </head>

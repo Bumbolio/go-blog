@@ -42,8 +42,8 @@ pluralizelisttitles = false
     lineNoStart = 1
     lineNos = false
     lineNumbersInTable = true
-    noClasses = false
-    style = "hugo gen chromastyles --style=dracula > assets/css/syntax.css"
+    noClasses = true
+    style = "dracula"
     tabWidth = 4
   [markup.goldmark.renderer]
     unsafe = true
